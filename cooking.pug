@@ -1,0 +1,51 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title cooking
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i(class="icon-"+icon)
+            .control-panel__name=name
+
+        +controler('home','Главная','active')
+        +controler('action-off','Блюда','')
+        +controler('user','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      .head
+        .mobile-container
+          a(href="#").head__back.icon-arrow
+          .head__title Рецепт
+          a(href="#").basket.icon-cart.notification
+      .mobile-container
+        .description
+          h2.description__title Lorem ipsum dolor sit
+          ul.description__ul
+            li Quis 
+            li maecenas 
+            li at neque
+            li quisque 
+            li viverra 
+            li sed neque
+            li porttitor
+          p.text Fames vel nascetur eu, in semper commodo, eget nunc ut. Mattis integer fermentum dictum mattis consequat sit dictum nulla. Quam elit tristique id cras hac pellentesque ullamcorper nullam vel. Morbi integer vitae viverra quam elit tellus, tempus placerat faucibus. Ullamcorper orci nam sit sem molestie sed dui. Mauris, nunc, egestas sed leo magna morbi enim nisi, nec. Fames vel nascetur eu, in semper commodo, eget nunc ut. Mattis integer fermentum dictum mattis consequat sit dictum nulla. Quam elit tristique id cras hac pellentesque ullamcorper nullam vel. Morbi integer vitae viverra quam elit tellus, tempus placerat faucibus. Ullamcorper orci nam sit sem molestie sed dui. Mauris, nunc, egestas sed leo magna morbi enim nisi, nec.Fames vel nascetur eu, in semper commodo, eget nunc ut. Mattis integer fermentum dictum mattis consequat sit dictum nulla. Quam elit tristique id cras hac pellentesque ullamcorper nullam vel. Morbi integer vitae viverra quam elit tellus, tempus placerat faucibus. Ullamcorper orci nam sit sem molestie sed dui. Mauris, nunc, egestas sed leo magna morbi enim nisi, nec. 
+
+      
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js") 

@@ -1,0 +1,81 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title specialists
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i(class="icon-"+icon)
+            .control-panel__name=name
+
+        +controler('home','Главная','active')
+        +controler('action-off','Блюда','')
+        +controler('user','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      .head
+        .mobile-container
+          a(href="#").head__back.icon-arrow
+          .head__title Здоровье
+          a(href="#").basket.icon-cart.notification
+      .block-info
+        .mobile-container 
+          mixin specialist(img, name) 
+            .block-info__item
+              .block-info__col
+                .block-info__img   
+                  img(src="img/specialist"+img+".svg", alt="")
+              .block-info__col
+                .block-info__top 
+                  .block-info__name=name
+                  .block-info__rating
+                    .rating-widget
+                      .rating-stars.text-center
+                        ul#stars
+                          li.star(data-value='1')
+                            i.icon-action-off
+                          li.star(data-value='2')
+                            i.icon-action-off
+                          li.star(data-value='3')
+                            i.icon-action-off
+                          li.star(data-value='4')
+                            i.icon-action-off
+                          li.star(data-value='5')
+                            i.icon-action-off
+                .block-info__address 2715 Ash Dr. San Jose, South Dakota 83475
+                a(href="#") Подробнее  
+          +specialist('1', 'Esther Howard')
+          +specialist('2', 'Jane Cooper')
+          +specialist('3', 'Kathryn Murphy')
+      
+          +specialist('1', 'Esther Howard')
+          +specialist('2', 'Jane Cooper')
+          +specialist('3', 'Kathryn Murphy')
+      
+          +specialist('1', 'Esther Howard')
+          +specialist('2', 'Jane Cooper')
+          +specialist('3', 'Kathryn Murphy')
+      
+          +specialist('1', 'Esther Howard')
+          +specialist('2', 'Jane Cooper')
+          +specialist('3', 'Kathryn Murphy')
+      
+     
+      
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js") 

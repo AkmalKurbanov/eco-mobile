@@ -1,0 +1,39 @@
+.control-panel {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  filter: drop-shadow(0px -2px 11px rgba(0, 0, 0, 0.1));
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 75px;
+  background-color: $wc;
+  z-index: 10;
+
+  &__item {
+    transition: $tr;
+    color: $gc;
+    height: 100%;
+    padding: 15px 5px;
+
+    &.active,
+    &:hover {
+      color: $mc;
+    }
+  }
+
+  &__name {
+    font-size: 10px;
+    line-height: 12.19px;
+    font-weight: 700;
+    margin-top: 10px;
+  }
+
+  &__item {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

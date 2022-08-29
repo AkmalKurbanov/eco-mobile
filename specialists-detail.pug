@@ -1,0 +1,124 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title eco products
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+    script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i
+            .control-panel__name=name
+
+        +controler('','Главная','active')
+        +controler('','Блюда','')
+        +controler('','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      .head
+        .mobile-container
+          a(href="#").head__back.icon-arrow
+          .head__title Jane Cooper
+          a(href="#").basket.icon-cart.notification
+            
+      .mobile-container
+        .specialist-img
+          img(src="img/specialist.jpg", alt="")
+        .rating-title 
+          h2 Jane Cooper
+          .rating-widget
+            .rating-stars.text-center
+              ul#stars
+                li.star(data-value='1')
+                  i.icon-action-off
+                li.star(data-value='2')
+                  i.icon-action-off
+                li.star(data-value='3')
+                  i.icon-action-off
+                li.star(data-value='4')
+                  i.icon-action-off
+                li.star(data-value='5')
+                  i.icon-action-off
+        ul.list 
+          li 
+            i.icon-user 
+            span +56 clients
+          li 
+            i.icon-phone 
+            a(href="tel:+996123456789") +996 123 456 789   
+          li 
+            i.icon-envelope 
+            a(href="mailto:theresewebb@gmail.com") theresewebb@gmail.com   
+          li 
+            i.icon-clock 
+            span 10 AM - 7 PM   
+          li 
+            i.icon-chrome 
+            a(href="http://www.diet-doctor.kg/") http://www.diet-doctor.kg/  
+          li 
+            i.icon-marker 
+            span 4140 Parker Rd. Allentown  
+        
+        p.text Aliquet in mauris ullamcorper eget mattis massa integer amet. Vel commodo laoreet dui lectus eu auctor. Aliquam eu purus pharetra aenean sit accumsan ultricies sollicitudin risus. Cras cum egestas enim duis amet erat. Sagittis sem sagittis a est. Velit vitae orci suspendisse vivamus nulla ultricies lorem semper urna.
+        
+        #map
+        
+        br
+        a.btn(href="#") Записаться к специалисту
+        br
+        
+        .block-info
+          mixin block(img, name) 
+            .block-info__item.block-info__item--shadow
+              .block-info__col
+                .block-info__img   
+                  img(src="img/specialist"+img+".svg", alt="")
+              .block-info__col
+                .block-info__top 
+                  .block-info__name=name
+                  .block-info__rating
+                    .rating-widget
+                      .rating-stars.text-center
+                        ul#stars
+                          li.star(data-value='1')
+                            i.icon-action-off
+                          li.star(data-value='2')
+                            i.icon-action-off
+                          li.star(data-value='3')
+                            i.icon-action-off
+                          li.star(data-value='4')
+                            i.icon-action-off
+                          li.star(data-value='5')
+                            i.icon-action-off
+                .block-info__address 2715 Ash Dr. San Jose, South Dakota 83475
+                p.text Aliquet in mauris ullamcorper eget mattis massa integer amet. Vel commodo laoreet dui lectus eu auctor. Aliquam eu purus pharetra aenean sit accumsan ultricies sollicitudin risus. Cras cum egestas enim duis amet erat. Sagittis sem sagittis a est. Velit vitae orci suspendisse vivamus nulla ultricies lorem semper urna. 
+          +block('1', 'Esther Howard')
+          +block('2', 'Jane Cooper')
+          +block('3', 'Kathryn Murphy')
+          a.btn(href="#") Подробнее 
+      
+
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js")
+    script(type='text/javascript').
+      var map;
+      DG.then(function () {
+      map = DG.map('map', {
+      center: [54.98, 82.89],
+      zoom: 13
+      });
+      DG.marker([54.98, 82.89]).addTo(map).bindPopup('Address!');
+      }); 

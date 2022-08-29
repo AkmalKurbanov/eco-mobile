@@ -1,0 +1,137 @@
+.tariffs {
+  margin-bottom: 50px;
+
+  &__wrap {
+    display: block;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+  }
+
+  &__item {
+    border: 1px solid $mc;
+    border-radius: 10px;
+    overflow: hidden;
+    text-align: center;
+    padding: 30px;
+    margin-bottom: 15px;
+
+
+    p {
+      color: rgba($mc, 0.65);
+      margin-bottom: 5px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $sc;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    margin-bottom: 12px;
+
+  }
+
+  &__kcal {
+    font-weight: 700;
+    font-size: 32px;
+    color: #757c7f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+
+
+    span {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      margin-left: 5px;
+
+    }
+  }
+
+  &__price {
+    background-color: $wc;
+    box-shadow: -1px 4px 11px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    font-size: 18px;
+    color: $mc;
+    font-weight: 700;
+    position: relative;
+    text-align: center;
+    min-height: 42px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+
+
+
+    span {
+      font-weight: 400;
+      color: rgba($mc, 0.5);
+      position: relative;
+      margin-left: 10px;
+      padding-left: 10px;
+
+      &:before {
+        position: absolute;
+        content: "/";
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+      }
+    }
+  }
+
+  &__discount {
+    position: absolute;
+    background-color: $sc;
+    color: $wc;
+    font-weight: 600;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 38px;
+    width: 100%;
+    min-height: 22px;
+    top: 50%;
+    right: -18px;
+    transform: translateY(-50%);
+    border-radius: 11px;
+  }
+}
+
+.days-count {
+  padding: 20px 0;
+  border-radius: 0px 0px 10px 10px;
+  background: $wc;
+  box-shadow: -1px 4px 11px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  margin-top: -10px;
+
+  h2 {
+    text-align: center;
+    color: $mc;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 25.81px;
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title eco products
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+    script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i
+            .control-panel__name=name
+
+        +controler('','Главная','active')
+        +controler('','Блюда','')
+        +controler('','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      .head
+        .mobile-container
+          a(href="#").head__back.icon-arrow
+          .head__title Корзина
+
+      .cart 
+        .mobile-container 
+          .cart__list
+            mixin item
+              .cart__item
+                .cart__item-close 
+                .cart__item-col 
+                  .cart__item-img 
+                    img(src="img/cart.jpg", alt="")
+                .cart__item-col 
+                  div
+                    .cart__item-title Тушеные овощи на пару
+                    .cart__item-subtitle Lorem ipsum dolor sit
+                  div
+                    .cart__item-col-bottom 
+                      .cart__item-price 366 с  
+                      .count
+                        .count-minus
+                          i.icon-minus
+                        span
+                          input.counter(type='number' value='1')
+                        .count-plus 
+                          i.icon-plus
+            +item      
+            +item      
+            +item      
+            +item      
+            +item      
+            +item      
+          .cart__promo-form
+            form(action="")
+            .cart__promo-input
+              input(type="text" placeholder="Введите промокод")  
+              button(type="submit").btn Применить
+          .cart__total 
+            ul 
+              li 
+                span Сумма блюд:
+                span 2984 сом      
+              li 
+                span Посуда:
+                span 20 сом      
+              li 
+                span Доставка:
+                span 160 сом
+              li.total
+                span Итого:
+                span 
+                  b 160 сом
+      
+
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js")
+    script(type='text/javascript').
+     

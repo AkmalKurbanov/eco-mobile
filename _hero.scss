@@ -1,0 +1,33 @@
+.hero {
+  margin-bottom: 12px;
+  &__slide {
+    height: 150px;
+    border-radius: 9px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  &__slide-title {
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+}

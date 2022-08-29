@@ -1,0 +1,80 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title eco products
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i
+            .control-panel__name=name
+
+        +controler('','Главная','active')
+        +controler('','Блюда','')
+        +controler('','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      .head
+        .mobile-container
+          a(href="#").head__back.icon-arrow
+          .head__title Эко продукты  
+          a(href="#").basket.icon-cart.notification
+      .card-product
+        .mobile-container 
+          .swiper.product-js
+            .swiper-wrapper
+              mixin card(img)
+                .swiper-slide
+                  .card-product__item
+                    .card-product__img
+                      img(src="img/eco-product"+img+".jpg", alt="")
+                    .card-product__name
+                    .card-product__price
+                    a(href="#").card-product__btn
+                      img(src="img/ecoferma.svg")
+                      | Ecoferma Market 
+                    a(href="#").btn Подробнее  
+              +card('1')
+              +card('2')
+              +card('3')
+            .swiper-pagination  
+
+      .card 
+        .mobile-container 
+          mixin card(img,title)
+            .card__item
+              .card__item-bg(style=`background-image: url('img/card${img}.jpg')`)
+                .card__info 
+                  .card__title!=title
+                  div 
+                    .card__rating
+                      span 1  
+                      span 2 
+                      span 3 
+                      span 4 
+                      span 5 
+                    .card__subtitle цена за один день <br> 818 сом
+          +card('1','Six Box')
+          +card('2','Eat Fit Healthy')
+          +card('3','Food Project')
+          +card('4','Malina Eco Food')
+          +card('5','Grow Food')
+          +card('6','Healthy Food')
+
+      
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js") 

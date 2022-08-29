@@ -1,0 +1,59 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title home
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i
+            .control-panel__name=name
+
+        +controler('','Главная','active')
+        +controler('','Блюда','')
+        +controler('','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      header.header
+        .mobile-container
+          .header__logo
+            a(href="#")
+              img(src="img/logo.svg", alt="") 
+      .hero
+        .mobile-container
+          .swiper.hero-js
+            .swiper-wrapper
+              mixin hero(title,img)
+                .swiper-slide
+                  .hero__slide(style=`background-image: url('img/hero${img}.jpg')`)
+                    h2.hero__slide-title!=title
+              +hero('Купи подписку от SixBox <br> на месяц и получи скидку 20%','1')
+              +hero('Купи подписку от SixBox <br> на месяц и получи скидку 20%','2')
+              +hero('Купи подписку от SixBox <br> на месяц и получи скидку 20%','3')
+      .category 
+        .mobile-container
+          mixin category(title,subtitle,img)
+            a(href="#").category__item(style=`background-image: url('img/hero${img}.jpg')`)
+              .category__title!=title
+              .category__subtitle!=subtitle 
+          +category('Доставка питания','8 дистрибьюторов','1')
+          +category('Эко продукты','8 дистрибьюторов','2')
+          +category('Здоровье','Диетологи и Нутрицологи','3')
+
+    
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js") 

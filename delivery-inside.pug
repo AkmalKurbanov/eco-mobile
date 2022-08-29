@@ -1,0 +1,79 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title delivery inside
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+
+  body
+    .mobile-wrap
+      .control-panel.mobile-container
+        mixin controler(icon, name, active)
+
+          .control-panel__item(class=active)
+            .control-panel__icon
+              i(class="icon-"+icon)
+            .control-panel__name=name
+
+        +controler('home','Главная','active')
+        +controler('action-off','Блюда','')
+        +controler('user','Кабинет','')
+        +controler('','Марафон','')
+        +controler('','Еще','')
+      .head
+        .mobile-container
+          a(href="#").head__back.icon-arrow
+          .head__title Six Box
+          a(href="#").basket.icon-cart.notification            
+      .days-count
+        .mobile-container
+          h2 Неделя = 6 дней
+          h2 Месяц = 24 дня
+      .tariffs 
+        .mobile-container
+          .tariffs__wrap        
+            mixin tariff(title,kcal,priceDay,discountWeek,priceWeek,weekPriceDay,discountMonth,priceMonth,monthPriceDay)
+              .tariffs__item
+                .tariffs__title=title
+                .tariffs__kcal=kcal
+                  span ккал/день
+                .tariffs__price=priceDay 
+                  |  c
+                  span  день
+                .tariffs__price=priceWeek
+                  |  с
+                  .tariffs__discount=-discountWeek
+                    |%                
+                  span неделя
+                p цена за один день 
+                = weekPriceDay
+                |  сом
+                .tariffs__price=priceMonth
+                  |  с
+                  .tariffs__discount= -discountMonth
+                    |%              
+                  span месяц    
+                p цена за один день 
+                  =monthPriceDay 
+                  |  сом
+                
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+            +tariff('STANDART','1000','930','10','5000','818','12','19600','818')
+     
+      
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js") 

@@ -1,0 +1,35 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title swipe
+    link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
+
+    link(rel="stylesheet", href="styles.css")
+    script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
+
+  body  
+    .starting.starting--login.mobile-container
+      h2.title-mobile Вход
+      .login 
+        .form
+          form(action="")
+            .form__input
+              input(type="text" placeholder="Email")
+            .form__input.pass
+              .pass-show
+                i.icon-eye
+              .pass-hide
+                i.icon-eye-off
+              input(type="password" placeholder="Пароль")
+            a(href="#").forgot-pass Забыли пароль?
+            button.btn войти
+          p Я не пользователь, 
+            a(href="#") зарегистрироваться 
+  
+  
