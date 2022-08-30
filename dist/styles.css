@@ -179,6 +179,7 @@ body.no-scroll {
   text-align: center;
   outline: none;
   pointer-events: none;
+  text-align: center;
 }
 
 .description__title {
@@ -1463,7 +1464,7 @@ body.no-scroll {
 
 .marathon__item-star:before {
   position: absolute;
-  content: '\e806';
+  content: '\e80a';
   font-family: icon;
   font-size: 11px;
   left: 50%;
@@ -1480,7 +1481,7 @@ body.no-scroll {
 
 .marathon__item-arrow:before {
   position: absolute;
-  content: '\e80e';
+  content: '\e804';
   font-family: icon;
   top: 50%;
   left: 50%;
