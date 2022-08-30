@@ -14,19 +14,7 @@ html(lang="en")
 
   body
     .mobile-wrap
-      .control-panel.mobile-container
-        mixin controler(icon, name, active)
-
-          .control-panel__item(class=active)
-            .control-panel__icon
-              i
-            .control-panel__name=name
-
-        +controler('','Главная','active')
-        +controler('','Блюда','')
-        +controler('','Кабинет','')
-        +controler('','Марафон','')
-        +controler('','Еще','')
+      include includes/control-panel.pug
       header.header
         .mobile-container
           .header__logo

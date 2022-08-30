@@ -1,10 +1,70 @@
 .header {
   border-bottom: 1px solid rgba(143, 143, 143, 0.1);
-  padding: 15px 0;
+  padding: 10px 0;
   margin-bottom: 10px;
+  min-height: 56px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba(143, 143, 143, 0.1);
+  margin-bottom: 10px;
+  z-index: 9;
+
+  .mobile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__logo {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+  }
+
+  &__title {
+    color: $mc;
+    font-weight: 600;
+    font-size: 14px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  &__back {
+    color: $gc;
+    text-decoration: none;
+    font-size: 25px;
+
+    &:before {
+      margin-left: -5px;
+      color: $gc;
+    }
+  }
+
+  &__filter {
+    color: $gc;
+    text-decoration: none;
+  }
+
+  .basket {
+    color: $gc;
+    font-size: 25px;
+    text-decoration: none;
+
+    &.notification {
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background-color: $mc;
+        border-radius: 100%;
+        top: 0;
+        left: 100%;
+      }
+    }
   }
 }

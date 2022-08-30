@@ -15,24 +15,12 @@ html(lang="en")
 
   body
     .mobile-wrap
-      .control-panel.mobile-container
-        mixin controler(icon, name, active)
-
-          .control-panel__item(class=active)
-            .control-panel__icon
-              i
-            .control-panel__name=name
-
-        +controler('','Главная','active')
-        +controler('','Блюда','')
-        +controler('','Кабинет','')
-        +controler('','Марафон','')
-        +controler('','Еще','')
-      .head
+      include includes/control-panel.pug
+      .header
         .mobile-container
-          a(href="#").head__back.icon-arrow
-          .head__title Ecoferma Market
-          a(href="#").basket.icon-cart.notification
+          a(href="#").header__back.icon-back
+          .header__title Ecoferma Market
+          a(href="#").basket.icon-group-533.notification
             
       .mobile-container      
         .rating-title 

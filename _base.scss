@@ -7,10 +7,18 @@
 body {
   font-family: 'Montserrat',
     sans-serif;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .mobile-wrap {
   padding-bottom: 100px;
+
+  &--swipe {
+    padding-bottom: 75px;
+  }
 }
 
 .mobile-container {
@@ -21,54 +29,7 @@ body {
   position: relative;
 }
 
-.head {
-  min-height: 56px;
-  display: flex;
-  align-items: center;
-  border-bottom: 1px solid rgba(143, 143, 143, 0.1);
-  margin-bottom: 10px;
 
-  .mobile-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__title {
-    color: $mc;
-    font-weight: 600;
-    font-size: 14px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  &__back {
-    color: $gc;
-    text-decoration: none;
-  }
-
-  .basket {
-    color: $gc;
-    font-size: 25px;
-    text-decoration: none;
-
-    &.notification {
-      position: relative;
-
-      &:after {
-        position: absolute;
-        content: '';
-        width: 6px;
-        height: 6px;
-        background-color: $mc;
-        border-radius: 100%;
-        top: 0;
-        left: 100%;
-      }
-    }
-  }
-}
 
 .btn {
   border-radius: 10px;
@@ -88,6 +49,14 @@ body {
 
   &:hover {
     background-color: #FD384C;
+  }
+
+  &--white {
+    background-color: $wc;
+    color: $mc;
+    &:hover{
+      color: $wc;
+    }
   }
 }
 
@@ -229,66 +198,3 @@ body {
 }
 
 
-.swipe {
-  height: calc(100vh - 131px);
-  overflow: hidden;
-  white-space: nowrap;
-  margin-top: -10px;
-
-  .mobile-container {
-    padding: 0;
-  }
-
-  .swipe__item {
-    width: 100%;
-    height: 100%;
-    background-color: $mc;
-    display: inline-block;
-    transform-origin: bottom;
-    position: relative;
-
-    img {
-      position: absolute;
-      object-fit: cover;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-    }
-  }
-
-  .mobile-container,
-  .swiper,
-  .swiper-wrapper,
-  .swiper-slide {
-    height: 100%;
-  }
-
-  .swiper-slide {
-    &.swiper-slide-prev {
-      .swipe__item {
-        transform: translateY(-40px) translateX(-100%) rotate(-60deg);
-        transition: all .4s ease-in-out;
-        transition-delay: .1s;
-      }
-    }
-
-    &.swiper-slide-next {
-      .swipe__item {
-        transform: translateY(-40px) translateX(100%) rotate(60deg);
-        transition: all .4s ease-in-out;
-        transition-delay: .1s;
-      }
-    }
-
-    &.swiper-slide-active {
-      .swipe__item {
-        transform: translate(0) rotate(0);
-        transition: all .4s ease-in-out;
-        transition-delay: .1s;
-      }
-    }
-  }
-}

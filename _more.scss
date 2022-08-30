@@ -1,0 +1,15 @@
+.nav {
+  li {
+    display: block;
+
+    a {
+      border-bottom: 1px solid rgba(#333, .1);
+      text-decoration: none;
+      display: block;
+      color: $mc;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 15px;
+    }
+  }
+}

@@ -9,7 +9,7 @@
   .starting {
     text-align: center;
     padding: 48px 25px 25px;
-    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
 
     &--welcome {
       display: flex;

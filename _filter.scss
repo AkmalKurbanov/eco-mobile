@@ -1,0 +1,211 @@
+.filter {
+  border-radius: 0px 0px 20px 20px;
+  position: fixed;
+  width: 100%;
+  top: -200%;
+  transition: $tr;
+  background-color: $wc;
+  z-index: 2;
+  padding: 15px 0 45px;
+  height: calc(100% - 175px);
+  overflow-y: scroll;
+  &.open {  
+    top: 56px;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+
+    label {
+      font-size: 14px;
+    }
+
+    input {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+      cursor: pointer;
+
+      &:checked {
+        ~span {
+
+          &:before,
+          &:after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &__wrap {
+      position: relative;
+    }
+
+    span {
+      width: 20px;
+      height: 20px;
+      border-radius: 6px;
+      border: 1px solid $mc;
+      display: block;
+      position: relative;
+      cursor: pointer;
+
+      &:before,
+      &:after {
+        position: absolute;
+        content: '';
+        background-color: $mc;
+        height: 2px;
+        border-radius: 2px;
+        transition: $tr;
+        opacity: 0;
+      }
+
+      &:before {
+        width: 4px;
+        transform: rotate(40deg);
+        left: 3px;
+        bottom: 6px;
+      }
+
+      &:after {
+        width: 12px;
+        transform: rotate(-45deg);
+        left: 5px;
+        bottom: 8px;
+      }
+    }
+  }
+
+  .range-slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+
+    &:before,
+    &:after {
+      position: absolute;
+      content: '';
+      width: 10px;
+      height: 10px;
+      border-radius: 100%;
+      background-color: $mc;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: -1;
+    }
+
+    &:before {
+      left: 0;
+    }
+
+    &:after {
+      right: 0;
+    }
+
+    &__range {
+      -webkit-appearance: none;
+      height: 3px;
+      width: 100%;
+      background-color: $mc;
+      outline: none;
+      border: none;
+
+      &::-webkit-slider-thumb {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background: $mc;
+        cursor: pointer;
+      }
+
+
+      &::-moz-range-thumb {
+        appearance: none;
+        width: 16px;
+        height: 16px;
+        border-radius: 100%;
+        background: $mc;
+        cursor: pointer;
+      }
+
+    }
+
+    &__value {
+      display: none;
+    }
+
+    &__content {
+      text-align: center;
+      color: $gc;
+      font-size: 10px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: calc(100% + 10px);
+    }
+  }
+
+  &__time {
+    color: $gc;
+    font-size: 14px;
+    display: flex;
+  }
+
+  &__time-item {
+    margin-right: 35px;
+    display: flex;
+    align-items: center;
+
+    label {
+      margin-right: 15px;
+    }
+  }
+
+  &__time-input {
+    border-radius: 12px;
+    border: 1px solid $gc;
+    overflow: hidden;
+    padding: 0 18px;
+    min-height: 30px;
+    display: flex;
+    align-items: center;
+
+    input {
+      outline: none;
+      border: none;
+      width: 40px;
+      margin-right: 8px;
+      font-size: 14px;
+      color: #8f8f8f;
+    }
+
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+      background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACmSURBVHgBxZGxEYMwDEUlp0npMIFHCCOkS5fLBiELZIQkEyQbELIAR0VJS8cKjAAdlY1s4M4HpuG44ze2pPcl+QywiW4hP97/3sdV2zlgwRimdD37l31dJE1u19nYQHBGh+gCfOpps4Z+DWGlODWI9VRYKrSDIORfZPgYMaWU6vQLqnJiMKboUFBy2Lsi2B9gAMejlVRX3dUEUr1teFbmHyLvBWuoBTz8LomKcj/UAAAAAElFTkSuQmCC) no-repeat center center;
+      width: 12px;
+      opacity: 1;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}

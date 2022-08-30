@@ -4,7 +4,7 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title swipe
+    title marathon
     link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css')
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
@@ -14,14 +14,309 @@ html(lang="en")
     script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
 
   body    
-    .starting.starting--welcome.mobile-container
-      .starting__item
-        h2.title-mobile Добро пожаловать в <br> EcoLife!
-      .starting__item
-        .starting__img
-          img(src="img/Union.png", alt="")
-        p На одной платформе мы собрали <br> для вас все необходимое  
-      .starting__item
-        button.btn Начать
-    
+    .mobile-wrap
+      include includes/control-panel.pug
+      .header
+        .mobile-container
+          a(href="#").header__back.icon-back
+          .header__logo
+            a(href="#")
+              img(src="img/logo.svg", alt="") 
+          a(href="#").basket.icon-group-533.notification
+            
+      .marathon
+        .marathon__top
+          .mobile-container
+            .marathon__img
+              img(src="img/specialist.jpg", alt="")
+            p Айка, Ваш результат лучше <br> вчерашнего на  0.6 кг
+            .marathon__emoji
+              img(src="img/smile.svg", alt="")
+        
+        .marathon__table-wrap
+          .tab.mobile-container
+            ul.tabs
+              li
+                a(href='#') Забег 1
+              li
+                a(href='#') Забег 2
+              li
+                a(href='#') Забег 3
+            .tab_content
+              .tabs_item
+                .marathon__table
+                  .marathon__table-item.marathon__table-item--empty
+                    .marathon__item-td.marathon__item-td--empty 
+                    .marathon__item-td
+                      .marathon__item-date 28.06
+                    .marathon__item-td
+                      .marathon__item-date 29.06
+                    .marathon__item-td
+                      .marathon__item-date 30.06
 
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Карина
+                      .marathon__index  
+                        .marathon__item-star
+                          
+                        .marathon__item-arrow.marathon__item-arrow--up 
+                            
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Николай
+                      .marathon__index  
+                        .marathon__item-star
+                          
+                        .marathon__item-arrow.marathon__item-arrow--up 
+                            
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Айка
+                      .marathon__index  
+                          
+                        .marathon__item-arrow.marathon__item-arrow--down                             
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+              .tabs_item
+                .marathon__table
+                
+                  .marathon__table-item.marathon__table-item--empty
+                    .marathon__item-td.marathon__item-td--empty 
+                    .marathon__item-td
+                      .marathon__item-date 28.06
+                    .marathon__item-td
+                      .marathon__item-date 29.06
+                    .marathon__item-td
+                      .marathon__item-date 30.06
+
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Карина
+                      .marathon__index  
+                        .marathon__item-star
+                          
+                        .marathon__item-arrow.marathon__item-arrow--up 
+                            
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Николай
+                      .marathon__index  
+                        .marathon__item-star
+                          
+                        .marathon__item-arrow.marathon__item-arrow--up 
+                            
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Айка
+                      .marathon__index  
+                        .marathon__item-arrow.marathon__item-arrow--down                             
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+              .tabs_item
+                .marathon__table
+                
+                  .marathon__table-item.marathon__table-item--empty
+                    .marathon__item-td.marathon__item-td--empty 
+                    .marathon__item-td
+                      .marathon__item-date 28.06
+                    .marathon__item-td
+                      .marathon__item-date 29.06
+                    .marathon__item-td
+                      .marathon__item-date 30.06
+
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Карина
+                      .marathon__index  
+                        .marathon__item-star
+                          
+                        .marathon__item-arrow.marathon__item-arrow--up 
+                            
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Николай
+                      .marathon__index  
+                        .marathon__item-star
+                          
+                        .marathon__item-arrow.marathon__item-arrow--up 
+                            
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  .marathon__table-item
+                    .marathon__item-td.marathon__item-td--name
+                      .marathon__item-name
+                        .dropdown-js
+                          i.icon-angle-down
+                        | Айка
+                      .marathon__index  
+                        .marathon__item-arrow.marathon__item-arrow--down                             
+                    .marathon__item-td
+                      .marathon__item-num.bc 72.6 кг
+                      
+                    .marathon__item-td
+                      .marathon__item-num.mc 70.5 кг (-2.1 кг)
+                    .marathon__item-td
+                      .marathon__item-num.sc 72.6 кг (+2.1 кг)
+                    .marathon__table-item-dropdown 
+                      .marathon__table-dropdown-item 
+                        span 28.06 — (72.6 кг)
+                        span 8.07 — (68.6 кг)
+                      .marathon__table-dropdown-item 
+                        span -0.6 кг  
+                        span.like 
+                          img(src="img/heart.svg", alt="") 
+                          | 4
+                  
+              
+
+
+    script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
+    script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="scripts.js")

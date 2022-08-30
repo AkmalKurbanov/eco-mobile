@@ -9,65 +9,112 @@ html(lang="en")
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
-
+    link(rel="stylesheet", href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css")
     link(rel="stylesheet", href="styles.css")
     script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
 
   body
-    
-    .control-panel.mobile-container
-      mixin controler(icon, name, active)
+    include includes/filter.pug 
+    include includes/control-panel.pug
+    .mobile-wrap.mobile-wrap--swipe 
+      .header
+        .mobile-container
+          a(href="#").header__filter.icon-filtr
+          .header__title Блюда
+          a(href="#").basket.icon-group-533.notification
+      .swipe 
+        .mobile-container
+          .swiper.swipe-js
+            .swiper-wrapper
+              .swiper-slide
+                .swipe__item
+                  img(src="img/swipe1.jpg", alt="")
+                  .swipe__desc 
+                    h2 Тушеные овощи на пару
+                    span КБЖ: 322  23  6
+                    span Время приготовления: 50 мин
+                    .swipe__control 
+                      .swipe__control-item 
+                        i.icon-swipe-close
+                      .swipe__control-item
+                        i.icon-swipe-star
+                      .swipe__control-item
+                        i.icon-swipe-heart 
+                  .swipe__item-control
+                    a(href="#").btn В корзину 
+                    button.btn.btn--white.recipe-js Рецепт
+                .swipe__item-recipe
+                  .description 
+                    .description__title Тушеные овощи на пару  
+                    .description__ul  
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                    p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam, aperiam suscipit optio molestiae consectetur in sunt nisi totam quasi expedita explicabo modi officiis tempora? In, quas. Laboriosam enim molestiae at fugiat sed voluptatum sit cumque pariatur tempora consequuntur. Aut blanditiis debitis excepturi magni, nobis possimus reprehenderit odit exercitationem nam a, culpa quisquam incidunt nihil rerum repellat nulla inventore totam doloribus illum architecto tempore voluptatum labore nisi itaque! Fuga dolore possimus, accusamus consectetur assumenda rerum aliquam, magnam ducimus numquam culpa nam repudiandae iusto ipsum maiores eligendi alias explicabo expedita est non laborum nihil in commodi. Placeat culpa qui quo obcaecati iste rem a quam cumque nostrum assumenda mollitia impedit excepturi, deleniti labore ipsum velit quia fugiat sapiente accusamus veritatis porro. Unde fugiat consequatur quidem dolorum eum. Officia sapiente aliquam quis?
+              .swiper-slide
+                .swipe__item
+                  img(src="img/swipe2.jpg", alt="")
+                  .swipe__desc 
+                    h2 Тушеные овощи на пару
+                    span КБЖ: 322  23  6
+                    span Время приготовления: 50 мин
+                    .swipe__control 
+                      .swipe__control-item 
+                        i.icon-swipe-close
+                      .swipe__control-item
+                        i.icon-swipe-star
+                      .swipe__control-item
+                        i.icon-swipe-heart 
+                  .swipe__item-control
+                    a(href="#").btn В корзину 
+                    button.btn.btn--white.recipe-js Рецепт
+                .swipe__item-recipe
+                  .description 
+                    .description__title Тушеные овощи на пару  
+                    .description__ul  
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                    p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam, aperiam suscipit optio molestiae consectetur in sunt nisi totam quasi expedita explicabo modi officiis tempora? In, quas. Laboriosam enim molestiae at fugiat sed voluptatum sit cumque pariatur tempora consequuntur. Aut blanditiis debitis excepturi magni, nobis possimus reprehenderit odit exercitationem nam a, culpa quisquam incidunt nihil rerum repellat nulla inventore totam doloribus illum architecto tempore voluptatum labore nisi itaque! Fuga dolore possimus, accusamus consectetur assumenda rerum aliquam, magnam ducimus numquam culpa nam repudiandae iusto ipsum maiores eligendi alias explicabo expedita est non laborum nihil in commodi. Placeat culpa qui quo obcaecati iste rem a quam cumque nostrum assumenda mollitia impedit excepturi, deleniti labore ipsum velit quia fugiat sapiente accusamus veritatis porro. Unde fugiat consequatur quidem dolorum eum. Officia sapiente aliquam quis?
+              .swiper-slide
+                .swipe__item
+                  img(src="img/card3.jpg", alt="")
+                  .swipe__desc 
+                    h2 Тушеные овощи на пару
+                    span КБЖ: 322  23  6
+                    span Время приготовления: 50 мин
+                    .swipe__control 
+                      .swipe__control-item 
+                        i.icon-swipe-close
+                      .swipe__control-item
+                        i.icon-swipe-star
+                      .swipe__control-item
+                        i.icon-swipe-heart 
+                  .swipe__item-control
+                    a(href="#").btn В корзину 
+                    button.btn.btn--white.recipe-js Рецепт
+                .swipe__item-recipe
+                  .description 
+                    .description__title Тушеные овощи на пару  
+                    .description__ul  
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                      li lorem2
+                    p.text Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis aliquam, aperiam suscipit optio molestiae consectetur in sunt nisi totam quasi expedita explicabo modi officiis tempora? In, quas. Laboriosam enim molestiae at fugiat sed voluptatum sit cumque pariatur tempora consequuntur. Aut blanditiis debitis excepturi magni, nobis possimus reprehenderit odit exercitationem nam a, culpa quisquam incidunt nihil rerum repellat nulla inventore totam doloribus illum architecto tempore voluptatum labore nisi itaque! Fuga dolore possimus, accusamus consectetur assumenda rerum aliquam, magnam ducimus numquam culpa nam repudiandae iusto ipsum maiores eligendi alias explicabo expedita est non laborum nihil in commodi. Placeat culpa qui quo obcaecati iste rem a quam cumque nostrum assumenda mollitia impedit excepturi, deleniti labore ipsum velit quia fugiat sapiente accusamus veritatis porro. Unde fugiat consequatur quidem dolorum eum. Officia sapiente aliquam quis?
 
-        .control-panel__item(class=active)
-          .control-panel__icon
-            i
-          .control-panel__name=name
-
-      +controler('','Главная','active')
-      +controler('','Блюда','')
-      +controler('','Кабинет','')
-      +controler('','Марафон','')
-      +controler('','Еще','')
-    .head
-      .mobile-container
-        a(href="#").head__filter.icon-arrow
-        .head__title Корзина
-        a(href="#").basket.icon-cart.notification
-    .swipe 
-      .mobile-container
-        .swiper.swipe-js
-          .swiper-wrapper
-            .swiper-slide
-              .swipe__item
-                img(src="img/swipe1.jpg", alt="")
-                .swipe__desc 
-                  h2 Тушеные овощи на пару
-                  span КБЖ: 322  23  6
-                  span Время приготовления: 50 мин
-                .swipe__control 
-                  .swipe__control-item 
-                  .swipe__control-item 
-                  .swipe__control-item 
-
-            .swiper-slide
-              .swipe__item
-                img(src="img/swipe2.jpg", alt="")
-            .swiper-slide
-              .swipe__item
-                img(src="img/card2.jpg", alt="")
-            .swiper-slide
-              .swipe__item
-                img(src="img/swipe1.jpg", alt="")
-            .swiper-slide
-              .swipe__item
-                img(src="img/swipe2.jpg", alt="")
-            .swiper-slide
-              .swipe__item
-                img(src="img/card2.jpg", alt="")
+              
       
     
     script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')
     script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+    script(src="https://code.jquery.com/ui/1.13.2/jquery-ui.js") 
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-touch-events/2.0.0/jquery.mobile-events.min.js") 
     
     script(src="scripts.js")
      
