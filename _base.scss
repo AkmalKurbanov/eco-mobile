@@ -130,7 +130,7 @@ body {
 .count {
   display: flex;
   align-items: center;
-
+  
   .count-minus,
   .count-plus {
     width: 24px;
@@ -156,6 +156,7 @@ body {
     text-align: center;
     outline: none;
     pointer-events: none;
+    text-align: center;
   }
 }
 
