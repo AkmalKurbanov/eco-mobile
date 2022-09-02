@@ -206,6 +206,18 @@
  $(window).scroll(function () {
    var scroll = $(window).scrollTop();
    if (scroll >= 100) {
-   
+
    }
+ });
+
+
+
+
+ $('.more-js').on('click', function () {
+  $('.menu').toggleClass('open');
+ });
+
+
+ $('.header__back').on('click', function () {
+  $('.menu').removeClass('open');
  });

@@ -1,15 +1,32 @@
-.nav {
-  li {
-    display: block;
+.menu {
+  position: fixed;
+  top: -200%;
+  transition: $tr;
+  opacity: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: $wc;
+  z-index: 10;
+  height: 100vh;
+  &.open {
+    top: 0;
+    opacity: 1;
+  }
 
-    a {
-      border-bottom: 1px solid rgba(#333, .1);
-      text-decoration: none;
+  .nav {
+    li {
       display: block;
-      color: $mc;
-      font-size: 14px;
-      font-weight: 700;
-      padding: 15px;
+
+      a {
+        border-bottom: 1px solid rgba(#333, .1);
+        text-decoration: none;
+        display: block;
+        color: $mc;
+        font-size: 14px;
+        font-weight: 700;
+        padding: 15px;
+      }
     }
   }
 }

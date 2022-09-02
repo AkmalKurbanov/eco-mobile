@@ -1664,11 +1664,31 @@ body.no-scroll {
   display: block;
 }
 
-.nav li {
+.menu {
+  position: fixed;
+  top: -200%;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  opacity: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  background-color: #fff;
+  z-index: 10;
+  height: 100vh;
+}
+
+.menu.open {
+  top: 0;
+  opacity: 1;
+}
+
+.menu .nav li {
   display: block;
 }
 
-.nav li a {
+.menu .nav li a {
   border-bottom: 1px solid rgba(51, 51, 51, 0.1);
   text-decoration: none;
   display: block;
