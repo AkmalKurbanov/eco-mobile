@@ -221,3 +221,20 @@
  $('.header__back').on('click', function () {
   $('.menu').removeClass('open');
  });
+
+
+
+ $(function () {
+   $('.pass-show').on('click', function () {
+     $(this).parent().find('input').focus();
+     $(this).parent().find('input').attr('type', 'text');
+     $(this).hide();
+     $(this).next().show();
+   });
+   $('.pass-hide').on('click', function () {
+     $(this).parent().find('input').focus();
+     $(this).parent().find('input').attr('type', 'password');
+     $(this).hide();
+     $(this).prev().show();
+   });
+ });

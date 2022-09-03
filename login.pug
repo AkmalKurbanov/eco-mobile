@@ -12,15 +12,17 @@ html(lang="en")
 
     link(rel="stylesheet", href="styles.css")
     script(src="https://maps.api.2gis.ru/2.0/loader.js?pkg=full") 
-
+    link(rel="stylesheet", href="/icons/fontello/css/icon.css")
+    
   body  
     .starting.starting--login.mobile-container
       h2.title-mobile Вход
       .login 
         .form
           form(action="")
-            .form__input
+            .form__input.error
               input(type="text" placeholder="Email")
+              span.error-message Неправельный логин или пароль   
             .form__input.pass
               .pass-show
                 i.icon-eye
