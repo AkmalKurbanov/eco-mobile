@@ -11,7 +11,7 @@ html(lang="en")
     link(href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap' rel='stylesheet')
 
     link(rel="stylesheet", href="styles.css")
-    link(rel="stylesheet", href="/icons/fontello/css/icon.css")
+    link(rel="stylesheet", href="icons/fontello/css/icon.css")
   body
     .mobile-wrap
       include includes/menu.pug 
@@ -27,6 +27,8 @@ html(lang="en")
           mixin card(img,title)
             .card__item
               .card__item-bg(style=`background-image: url('img/card${img}.jpg')`)
+                .card__item-logo
+                  img(src="img/logo-pattern.svg", alt="")
                 .card__info 
                   .card__title!=title
                   div 
