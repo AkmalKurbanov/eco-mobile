@@ -182,7 +182,7 @@
     border-radius: 12px;
     border: 1px solid $gc;
     overflow: hidden;
-    padding: 0 18px;
+    padding: 0 5px 0 18px;
     min-height: 30px;
     display: flex;
     align-items: center;
@@ -199,12 +199,13 @@
     input[type="number"]::-webkit-outer-spin-button,
     input[type="number"]::-webkit-inner-spin-button {
       -webkit-appearance: none;
-      background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAACmSURBVHgBxZGxEYMwDEUlp0npMIFHCCOkS5fLBiELZIQkEyQbELIAR0VJS8cKjAAdlY1s4M4HpuG44ze2pPcl+QywiW4hP97/3sdV2zlgwRimdD37l31dJE1u19nYQHBGh+gCfOpps4Z+DWGlODWI9VRYKrSDIORfZPgYMaWU6vQLqnJiMKboUFBy2Lsi2B9gAMejlVRX3dUEUr1teFbmHyLvBWuoBTz8LomKcj/UAAAAAElFTkSuQmCC) no-repeat center center;
-      width: 12px;
+      background: #FFF url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAACXBIWXMAACxLAAAsSwGlPZapAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAMJSURBVHgB7dzBbRNBFMbxN2tOnFauYKmAuAMoAVFAWFMApILEFRAKgHihgBw5AhUkJbgC8I0L3mEmxJIzAY8c73vvG+v9LrGiSImeXvy317tLZIwxxhhjjDHGGGOMOWCvLuqaClFRYaZdfVpV7qqUIRc14DDUIyJ3Fh42buQuqQAjKkQYbhM290t4eLO5Lgx58vIxXV3++k7AitngMNyv4Utz55u9P2u7+piAFTHg6afxO0qHe8uRO4/bTaDgBxyjRt6/3fIjddxu1OhBD3gjajmw0YONXBq1HNTowW7wP6OWAxg9yAFvi1oOWvQcgXnd1W98GBLtZ9H3fjJvl0tSBrXBMWoDDDeCiR5M5HaNWg5K9GA2eFTdbFxDQwKIHsSAY9Q80REx0I6eeuQGilqOWvRUN3jAqOWoRU8tckNHLUcremobzBK1HIXoqQyYM2o50tETj5xQ1HLEoie6wYJRyxGLnljkpKOWIxU9sQ1WiVqOQPREBqwZtRzu6LFHDiRqOWzRY91goKjlsEWPLXJoUcvhih7bU0R7UZ9Xjp5SYVaeTsJTxTUZY4wxxphDxvY6ePp5fOp831BhVit6P+Tr4EfEpP/dd/FiFSrkndxfbjZvfwz6JoP1YE94u/zs9ixJeGEQ1x+Of05oYKwHe8K/2rdwzHVG+Bar3r8gBiKfybXdeO7Iw16sEg5VPgnLsCAGIgfcfd/HaywWhKj3J1zDjUQGHA9khy15Hh6qn697l5t9bJesx6tFP7ZHih5X1FKiH9sDRY8taimVsyu1o8cZtZTKqVOq0WOOWkplwHrR44/avd9IiiSjJxW1lOoJ2ILRE4taCuI6Oe7oSUYtBXERDGv0hKOWghgwX/Tko3bvLyAgQ0ZPK2opqEtpB4yeWtRScBeDR/tGTzNqKcjbGewVPeWopSAH/PDo6UctBfkUsbZL9FCiloK+KdIO0YOJWgp6g9dy0UOKWqqIG9NtjR5Y1FJFDPj/0cOLWqqIp4i1zeihRi1V1O1tN6IHG7WDUNIdsI0xxhhjDKQ/CsOUr6Y96RIAAAAASUVORK5CYII=) no-repeat center center;
+      background-size: contain;
+      width: 22px;
       opacity: 1;
       position: absolute;
       top: 0;
-      right: 0;
+      right: -5px;
       bottom: 0;
     }
   }

@@ -90,7 +90,7 @@
       font-size: 18px;
       line-height: 30px;
       color: #333;
-      padding: 10px 17px;
+      padding: 12px 17px;
     }
 
     &.pass {
@@ -119,25 +119,25 @@
 }
 
 
+.pass-hide {
+  display: none;
+}
+
+.pass-hide,
+.pass-show {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  transform: translateY(-50%);
+  color: #333;
+  cursor: pointer;
+  font-size: 25px;
+  z-index: 1;
+  opacity: 0.5;
+}
 .login {
   margin-top: 60px;
 
-  .pass-hide {
-    display: none;
-  }
-
-  .pass-hide,
-  .pass-show {
-    position: absolute;
-    top: 50%;
-    right: 14px;
-    transform: translateY(-50%);
-    color: #333;
-    cursor: pointer;
-    font-size: 25px;
-    z-index: 1;
-    opacity: 0.5;
-  }
 
 
   .forgot-pass {

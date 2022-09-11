@@ -477,6 +477,12 @@
       "css": "eye",
       "code": 59427,
       "src": "elusive"
+    },
+    {
+      "uid": "178053298e3e5b03551d754d4b9acd8b",
+      "css": "doc-inv",
+      "code": 61787,
+      "src": "fontawesome"
     }
   ]
 }

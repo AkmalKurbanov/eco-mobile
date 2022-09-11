@@ -9,24 +9,128 @@
   background-color: $wc;
   z-index: 10;
   height: 100vh;
+
+
+
   &.open {
     top: 0;
     opacity: 1;
   }
 
   .nav {
+    overflow-y: scroll;
+    overflow-x: visible;
+    height: calc(var(--vh, 1vh) * 100 - 150px);
+
     li {
       display: block;
+      margin-bottom: 8px;
 
       a {
-        border-bottom: 1px solid rgba(#333, .1);
-        text-decoration: none;
-        display: block;
-        color: $mc;
+        background-color: $wc;
+        box-shadow: 0px 0px 15px rgba(139, 139, 139, 0.15);
+        border-radius: 12px;
+        padding: 15px 50px 15px 15px;
         font-size: 14px;
-        font-weight: 700;
-        padding: 15px;
+        font-weight: 500;
+        line-height: 17.07px;
+        text-decoration: none;
+        color: $bc;
+        display: block;
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: '\e81f';
+          font-family: icon;
+          transform: rotate(90deg);
+          color: $mc;
+          font-size: 10px;
+          right: 20px;
+        }
       }
+
+      &.title {
+        font-weight: 700;
+        font-size: 22px;
+        color: $bc;
+        margin-top: 25px;
+        margin-bottom: 25px;
+
+        &:after {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+.lang {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(51, 51, 51, 0.2);
+  backdrop-filter: blur(15px);
+  transition: $tr;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 11;
+
+  &__window {
+    background: $wc;
+    border-radius: 20px 20px 0px 0px;
+    bottom: -100%;
+    transition: all 1s;
+    position: absolute;
+    width: 100%;
+    padding: 30px 25px;
+
+    span {
+      color: $gc;
+      font-size: 12px;
+      margin-bottom: 25px;
+    }
+
+    ul {
+      li {
+        list-style: none;
+        border-bottom: 1px solid rgba(139, 139, 139, 0.15);
+
+        &:last-child {
+          border: none;
+        }
+
+        label {
+          padding: 15px;
+          display: block;
+          font-size: 14px;
+          font-weight: 400;
+          display: flex;
+          align-items: center;
+          color: $bc;
+        }
+
+        input {
+          accent-color: $mc;
+          margin-right: 15px;
+        }
+      }
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 25px;
+    }
+  }
+
+  &.open {
+    opacity: 1;
+    pointer-events: inherit;
+
+    .lang__window {
+      bottom: 0;
     }
   }
 }

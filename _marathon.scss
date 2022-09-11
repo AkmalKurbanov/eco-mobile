@@ -43,6 +43,13 @@
   &__table-wrap {
     overflow-x: scroll;
     overflow-y: hidden;
+     -ms-overflow-style: none;
+     /* IE и Edge */
+     scrollbar-width: none;
+     /* Firefox */
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__table {
@@ -59,6 +66,8 @@
     min-height: 30px;
     display: table;
     margin-bottom: 10px;
+
+   
 
     &--empty {
       border: none;
@@ -127,7 +136,7 @@
     position: relative;
     width: 10px;
     margin-left: 5px;
-    
+
     &:before {
       position: absolute;
       content: '\e804';
@@ -219,5 +228,6 @@
     &.open {
       transform: rotate(180deg);
     }
+
   }
 }
