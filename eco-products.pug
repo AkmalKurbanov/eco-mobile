@@ -104,11 +104,11 @@ html(lang="en")
 
       .card 
         .mobile-container 
-          mixin card(img,title)
+          mixin card(img,title,logo)
             .card__item
               .card__item-bg(style=`background-image: url('img/card${img}.jpg')`)
                 .card__item-logo
-                  img(src="img/logo-pattern.svg", alt="")
+                  img(src="img/logo/"+logo+".svg", alt="")
                 .card__info 
                   .card__title!=title
                   div 
@@ -127,12 +127,17 @@ html(lang="en")
                             li.star(data-value='5')
                               i.icon-action-off
                     .card__subtitle цена за один день <br> 818 сом
-          +card('1','Six Box')
-          +card('2','Eat Fit Healthy')
-          +card('3','Food Project')
-          +card('4','Malina Eco Food')
-          +card('5','Grow Food')
-          +card('6','Healthy Food')
+          +card('1','Six Box','Eat-Fit-Healthy')
+          +card('2','Eat Fit Healthy','Eat-Fit-Healthy-white')
+          +card('3','Food Project','Food-project')
+          +card('4','Malina Eco Food','Food-project-white')
+          +card('5','Grow Food','Growfood')
+          +card('6','Healthy Food','Growfood-white')
+          +card('6','Healthy Food','Healthy-food')
+          +card('6','Healthy Food','Healthy-food-white')
+          +card('6','Healthy Food','Malina')
+          +card('6','Healthy Food','Malina-white')
+          +card('6','Healthy Food','SixBox-white')
 
       
     script(src='https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js')

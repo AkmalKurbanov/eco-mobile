@@ -689,8 +689,8 @@ body.no-scroll {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 44px;
-  height: 32px;
+  width: 55px;
+  height: 55px;
   z-index: 1;
 }
 
